@@ -86,8 +86,8 @@ const editNoteByIdHandler = (request, h) => {
     };
 
     const response = h.response({
-      status: 'sucess',
-      message: 'Catatan berhasil diperbaharui',
+      status: 'success',
+      message: 'Catatan berhasil diperbarui',
     });
     response.code(200);
     return response;
@@ -110,7 +110,7 @@ const deleteNoteByIdHandler = (request, h) => {
     notes.splice(index, 1);
     const response = h.response({
       status: 'success',
-      message: 'catatan berhasil dihapus',
+      message: 'Catatan berhasil dihapus',
     });
     response.code(200);
     return response;
