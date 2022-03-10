@@ -1,7 +1,7 @@
 // server.js : Memuat kode untuk membuat, mengonfigurasi, dan menjalankan server HTTP menggunakan Hapi.
 
 const Hapi = require('@hapi/hapi');
-const routes = require('./routes');
+const routes = require('./api/notes/routes');
 
 const init = async () => {
   const server = Hapi.server({

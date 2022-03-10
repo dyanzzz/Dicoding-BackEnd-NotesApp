@@ -4,7 +4,7 @@ const { nanoid } = require('nanoid');
 const notes = require('./notes');
 
 const addNoteHandler = (request, h) => {
-  const { title, tags, body } = request.payload;
+  const { title = 'untitled', tags, body } = request.payload;
 
   const id = nanoid(16);
   const createdAt = new Date().toISOString();
@@ -23,7 +23,7 @@ const addNoteHandler = (request, h) => {
       status: 'success',
       message: 'Catatan berhasil ditambahkan',
       data: {
-        newNote,
+        noteId: id,
       },
     });
     response.code(201);
