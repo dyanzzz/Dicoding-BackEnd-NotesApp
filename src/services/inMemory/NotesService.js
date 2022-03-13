@@ -1,4 +1,4 @@
-const { nanoId } = require('nanoid');
+const { nanoid } = require('nanoid');
 
 class NotesService {
   constructor() {
@@ -6,7 +6,7 @@ class NotesService {
   }
 
   addNote({ title, body, tags }) {
-    const id = nanoId(16);
+    const id = nanoid(16);
     const createdAt = new Date().toISOString();
     const updateAt = createdAt;
 
@@ -38,7 +38,7 @@ class NotesService {
     return note;
   }
 
-  editNotebyId(id, { title, body, tags }) {
+  editNoteById(id, { title, body, tags }) {
     const index = this._notes.findIndex((note) => note.id === id);
 
     if (index === -1) {
