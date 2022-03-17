@@ -3,7 +3,7 @@ const ClientError = require('../../exceptions/ClientError');
 
 class NotesHandler {
   constructor(service, validator) {
-    this._service = service;
+    this._service = service.notes;
     this._validator = validator;
 
     this.postNoteHandler = this.postNoteHandler.bind(this);

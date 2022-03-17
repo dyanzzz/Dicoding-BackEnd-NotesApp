@@ -22,7 +22,9 @@ const init = async () => {
   await server.register({
     plugin: notes,
     options: {
-      service: notesService,
+      service: {
+        notes: notesService,
+      },
       validator: NotesValidator,
     },
   });
