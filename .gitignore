@@ -2,3 +2,5 @@ node_modules
 notes-api-webserver.pem
 imucreativedeveloper_accessKeys.csv
 imucreativedeveloper_codecommit_credentials.csv
+.env
+.prod.env
