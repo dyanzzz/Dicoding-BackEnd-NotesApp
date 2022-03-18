@@ -25,7 +25,9 @@ const init = async () => {
       service: {
         notes: notesService,
       },
-      validator: NotesValidator,
+      validator: {
+        notes: NotesValidator,
+      },
     },
   });
 
