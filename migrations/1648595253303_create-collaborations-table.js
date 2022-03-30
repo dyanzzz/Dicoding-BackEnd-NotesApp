@@ -24,7 +24,7 @@ exports.up = (pgm) => {
 
   // memberikan constraint foreignkey pada kolom note_id dan user_id terhadap notes.id dan users.id
   pgm.addConstraint('collaborations', 'fk_collaborations.note_id_notes.id', 'FOREIGN KEY(note_id) REFERENCES notes(id) ON DELETE CASCADE');
-  pgm.addConstraint('collaborations', 'fk_collaborations.user_id_user.id', 'FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE');
+  pgm.addConstraint('collaborations', 'fk_collaborations.user_id_users.id', 'FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE');
 };
 
 exports.down = (pgm) => {

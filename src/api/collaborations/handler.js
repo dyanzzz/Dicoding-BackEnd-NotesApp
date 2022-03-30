@@ -55,16 +55,13 @@ class CollaborationsHandler {
       const { noteId, userId } = request.payload;
 
       await this._notesService.verifyNoteOwner(noteId, credentialId);
-      const collaborationId = await this._collaborationsService.deleteCollaboration(noteId, userId);
+      await this._collaborationsService.deleteCollaboration(noteId, userId);
 
       const response = h.response({
         status: 'success',
-        message: 'Kolaborasi berhasil ditambahkan',
-        data: {
-          collaborationId,
-        },
+        message: 'Kolaborasi berhasil dihapus',
       });
-      response.code(201);
+
       return response;
     } catch (error) {
       if (error instanceof ClientError) {
