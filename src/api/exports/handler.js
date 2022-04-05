@@ -10,14 +10,14 @@ class ExportsHandler {
 
   async postExportNotesHandler(request, h) {
     try {
-      this._validator.validateExportnotesPayload(request.payload);
+      this._validator.validateExportNotesPayload(request.payload);
 
       const message = {
         userId: request.auth.credentials.id,
         targetEmail: request.payload.targetEmail,
       };
 
-      await this.service.sendMessage('export:notes', JSON.stringify(message));
+      await this._service.sendMessage('export:notes', JSON.stringify(message));
       const response = h.response({
         status: 'success',
         message: 'Permintaan anda dalam antrian',
