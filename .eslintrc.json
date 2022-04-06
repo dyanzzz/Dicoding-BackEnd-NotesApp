@@ -11,26 +11,9 @@
         "ecmaVersion": 12
     },
     "rules": {
+        "linebreak-style": "off",
         "no-console": "off",
         "max-len": 0,
-        "no-underscore-dangle": [
-            "error", {
-                "allow": [
-                    "_notes",
-                    "_service",
-                    "_validator",
-                    "_pool",
-                    "_authenticationService",
-                    "_userService",
-                    "_tokenManager",
-                    "_collaborationService",
-                    "_collaborationsService",
-                    "_notesService",
-                    "_exports",
-                    "_folder",
-                    "_client", "_cacheService"
-                ]
-            }
-        ]
+        "no-underscore-dangle": "off"
     }
 }
