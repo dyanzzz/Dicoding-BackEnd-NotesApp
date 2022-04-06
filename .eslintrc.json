@@ -26,7 +26,8 @@
                     "_collaborationService",
                     "_collaborationsService",
                     "_notesService",
-                    "_exports"
+                    "_exports",
+                    "_folder"
                 ]
             }
         ]
