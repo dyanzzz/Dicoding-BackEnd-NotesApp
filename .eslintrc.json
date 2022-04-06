@@ -28,7 +28,7 @@
                     "_notesService",
                     "_exports",
                     "_folder",
-                    "_client"
+                    "_client", "_cacheService"
                 ]
             }
         ]
